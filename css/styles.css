@@ -70,6 +70,10 @@ li{
 .cabecera{
     height: calc(100vh - 50px);
     grid-area: cabecera; 
+    animation-name: camaleon;
+    animation-iteration-count: initial;
+    animation-duration: 5s;
+    animation-iteration-count: 4;
     
        
 }
@@ -601,144 +605,12 @@ footer p{
 }
 
 
-/* @media only screen and (min-width: 768px){
-  
-    header{
-        grid-template-rows: 2px 100px;
-    }
-    nav{
-        font-size: 20px;
-        z-index: 1;
-        border-bottom: 0px;
-    }
-      li{
-         display: block; 
-    }
-    .cabecera{
-         height: 60vh;  
-        
-        background-size: contain;        
-    } 
+/*animaciones*/
 
-    .gallery {
-        grid-template-areas: 
-        "img2 img2"
-        "img1 img4"
-        "img3 img3"
-        "img3 img3"
-        "img5 img5"
-        "img5 img5"
-        "img6 img6"
-        "img7 img8"
-        "img9 img9"
-        "img10 img10"
-        "img10 img10"
-        "img11 img11"
-
-        "img13 img13"
-        "img12 img15"
-        "img14 img14"
-        "img14 img14"
-        "img16 img16"
-        "img16 img16"
-        "img17 img17"
-        "img18 img19"
-        "img20 img20"
-        "img21 img21"
-        "img21 img21"
-        "img22 img22"
-        
-        ;
-        grid-template-columns: 250px 250px;
-        grid-template-rows: repeat(24, 250px);
-    }
-
-    .main-classes{
-        grid-template-columns: repeat(3, 200px);
-        font-size: 20px;
-        grid-column-gap: 5px;
-    }
-}
-
-
-@media only screen and (max-width: 480px){
-
-    nav{
-        margin-top: 5px;
-        justify-content: center;
-    }
-    li{
-        margin: 5px;
-        font-size: 10px;
-        display: inline-block;
-    }
-
-    .gallery{
-        grid-template-areas: 
-        "img2"
-        "img1"
-        "img3"
-        "img4"
-        "img5"
-        "img6"
-        "img7"
-        "img8"
-        "img9"
-        "img10"
-        "img11"
-        "img12"
-        "img13"
-        "img14"
-        "img15"
-        "img16"
-        "img17"
-        "img18"
-        "img19"
-        "img20"
-        "img21"
-        "img22"
-           ;
-        grid-template-columns: 400px;
-        grid-template-rows: repeat(22, 250px);
-    }
-
-    .main-classes{
-        grid-template-columns: repeat(3, 140px);
-    }
-}
-
-
-@media only screen and (max-width: 320px){
-    
+@keyframes camaleon{
+   0%{filter: hue-rotate(0deg);}
+   30%{filter: hue-rotate(0deg);}
+   100%{filter: hue-rotate(360deg);}
+   
  
-    
-    nav{
-        margin-top: 15px;
-    }
-
-    
-
-    .gallery{
-        grid-template-columns: 250px;
-
-    }
-
-    .main-classes{
-        grid-template-areas: 
-        "B"
-        "A"
-        "."
-        "C"
-        "D"
-        "."
-        "F"
-        "E"   ;
-        grid-template-columns: 280px;
-        grid-template-rows: 250px 250px 100px 250px 250px 100px 250px 250px;
-        grid-row-gap: 15px;
-    }
-
-    footer{
-        font-size: 12px;
-    }
-} 
+}
