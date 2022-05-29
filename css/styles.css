@@ -124,6 +124,24 @@ footer p{
 /*FIN FOOTER*/
 
 
+/*CONTACT*/
+
+.form{
+    color: white;
+   padding: 20px;
+    
+}
+.form-img{
+    background-image: url(../assets/img8.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+
+
+
 /*PORTFOLIO*/
 
 
@@ -430,6 +448,7 @@ footer p{
 
 @media only screen and (max-width: 768px){
    
+
    .header-portfolio{
        height: 600px;
        
@@ -488,6 +507,12 @@ footer p{
 
 }
 
+
+@media (max-width: 576px){
+    .form-img{
+        height: 250px;
+    }
+}
 
 
 @media only screen and (max-width: 480px){
@@ -558,6 +583,13 @@ footer p{
 }
 
 @media only screen and (max-width: 320px){
+    /* .form-img{
+        height: 250px;
+    } */
+    
+    
+    
+    
     header{
         height: 220px;
         grid-template-rows: 20px 220px;

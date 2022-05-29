@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Nacho Corva</title>
 </head>
 <body>
+    
     <header>
         <ul>
             <li><a href="../index.html">HOME</a></li>
@@ -17,32 +19,36 @@
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
     </header>
-    <main>
-        <table>
-            <tr>
-                <td class="td1">
-                    <div class="contact">
-                        <img src="../assets/imagen5.jpg" class="contact-img">
-                    </div>
-                </td>
-                <td class="td2">
-                    <form>
-                        <label for="nombre">NAME</label>
-                        <input type="text" name="nombre">
-                        <label for="email">E-MAIL</label>
-                        <input type="text" for="email">
-                        <label for="question">HOW CAN I HELP YOU?</label>
-                        <textarea name="question"></textarea><br>
-                        <input type="submit" value="SEND" class="send">
-                     </form>
-                </td>
-            </tr>
-        </table>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="form-img col-sm-6">
+            </div>
+            <div class="form col-sm-6">
+                <div class="form">
+                     <label for="usr">Name:</label>
+                    <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form">
+                    <label for="Email">E-mail:</label>
+                    <input type="text" class="form-control" id="eml">
+                </div>
+                <div class="form">
+                    <label for="comment">How can I help you?:</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+                <button type="button" class="btn btn-success">Send</button>
+            </div>
+            
+        </div>
     </main>
 
     <footer>
         <p>All the images displayed here belong to Ignacio Corva</p>
         <p>Website designed by Leandro Fernandez Strifezza</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 </body>
 </html>
