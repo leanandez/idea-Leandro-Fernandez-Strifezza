@@ -14,7 +14,7 @@ body{
        
 }
 
-.container{
+.container1{
     display: grid;
     grid-template-areas: 
     "header"
@@ -39,11 +39,12 @@ header{
 }
 
 nav{
+    z-index: 1;
     grid-area: nav;
     display: flex;
     justify-content: center;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
+     font-size: 20px; 
     background-color: black;
     border-bottom: 2px grey solid;
     
@@ -62,12 +63,30 @@ a:hover{
     font-weight: bold;
 }
 
+
+
 li{
     display: inline-block;
     margin: 15px;
+    
 }
 
-.cabecera{
+.carousel-inner{
+    height: calc(100vh - 60px);
+}
+
+.carousel-inner img{
+    height: auto;
+    
+}
+
+.carousel-control-prev{
+    z-index: 0;
+}
+
+
+
+/* .cabecera{
     height: calc(100vh - 50px);
     grid-area: cabecera; 
     animation-name: camaleon;
@@ -83,7 +102,7 @@ li{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
-}
+} */
 
 
 /*FIN HEADER*/
@@ -448,6 +467,20 @@ footer p{
 
 @media only screen and (max-width: 768px){
    
+    .navbar{
+        padding-left: 0;
+    }
+
+    .navbar-nav{
+        background-color: black;
+           
+    }
+    
+    li{
+       border-bottom: 2px solid grey;
+    }
+
+
 
    .header-portfolio{
        height: 600px;
@@ -517,8 +550,23 @@ footer p{
 
 @media only screen and (max-width: 480px){
 
+      
+    nav{
+        font-size: 12px;
+              
+    }
+
+    li{
+        margin: 5px;
+    }
+
   
-   header{
+    .carousel-inner{
+        z-index: 0;
+        height: 320px;
+    }
+
+   /* header{
        height: auto;
        grid-template-rows: 20px 300px;
       
@@ -537,7 +585,7 @@ footer p{
         background-size: contain;
         background-position: top;
         
-    }
+    } */
 
     .header-portfolio{
         height: 320px;
@@ -583,21 +631,20 @@ footer p{
 }
 
 @media only screen and (max-width: 320px){
-    /* .form-img{
-        height: 250px;
-    } */
+    
+    .carousel-inner{
+        height: 220px;
+    }
     
     
-    
-    
-    header{
+    /* header{
         height: 220px;
         grid-template-rows: 20px 220px;
     }
 
     nav{
         font-size: 10px;    
-    }
+    } */
 
     li{
         margin: 4px;
