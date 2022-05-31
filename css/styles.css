@@ -542,8 +542,13 @@ footer p{
 
 
 @media (max-width: 576px){
+   
+    .carousel-inner{
+        height: 400px;
+    }
+   
     .form-img{
-        height: 250px;
+        height: 300px;
     }
 }
 
