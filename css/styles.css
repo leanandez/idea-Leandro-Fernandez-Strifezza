@@ -245,6 +245,7 @@ footer p{
     grid-area: img4;
 }
 
+/*1*/
 .img5{
     background-image: url(../assets/img5.jpg);
     background-size: cover;
