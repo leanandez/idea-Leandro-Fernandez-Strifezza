@@ -214,7 +214,7 @@ footer p{
 
 .img1 {
     background-image: url(../assets/img1.jpg);
-   background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     grid-area: img1;
