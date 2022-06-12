@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Source+Sans+Pro:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Source+Sans+Pro:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Frijole&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Joan&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
+/*maps*/
 body {
   background-color: #131c33;
   width: 100vw;
@@ -32,9 +33,9 @@ nav {
   grid-area: nav;
   display: flex;
   justify-content: center;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro";
   font-size: 20px;
-  background-color: black;
+  background-color: rgb(12, 11, 11);
   border-bottom: 2px grey solid;
 }
 
@@ -45,8 +46,9 @@ nav {
   text-shadow: 4px 4px 2px #000000;
 }
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: white;
+  color: #131c33;
   font-weight: bold;
+  font-size: 20px;
 }
 
 li {
@@ -65,23 +67,6 @@ li {
   z-index: 0;
 }
 
-/* .cabecera{
-    height: calc(100vh - 50px);
-    grid-area: cabecera; 
-    animation-name: camaleon;
-    animation-iteration-count: initial;
-    animation-duration: 5s;
-    animation-iteration-count: 4;
-
-
-}
-
-.index{
-    background-image: url(../assets/img2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
-} */
 /*FIN HEADER*/
 /*MAIN*/
 main {
@@ -101,6 +86,7 @@ footer {
   background-color: black;
   color: white;
   border-top: white 2px solid;
+  font-family: "Joan";
 }
 footer p {
   display: flex;
@@ -113,6 +99,7 @@ footer p {
 .form {
   color: white;
   padding: 20px;
+  font-family: "Source Sans Pro";
 }
 
 .form-img {
@@ -154,7 +141,7 @@ footer p {
   transition: ease-in 0.5s;
 }
 
-.img1 {
+.img1, .img26, .img25, .img24, .img23, .img22, .img21, .img20, .img19, .img18, .img17, .img16, .img15, .img14, .img13, .img12, .img11, .img10, .img9, .img8, .img7, .img6, .img5, .img4, .img3, .img2 {
   background-image: url(../assets/img1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -164,201 +151,126 @@ footer p {
 
 .img2 {
   background-image: url(../assets/img2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img2;
 }
 
 .img3 {
   background-image: url(../assets/img3.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img3;
 }
 
 .img4 {
   background-image: url(../assets/img4.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img4;
 }
 
 .img5 {
   background-image: url(../assets/img5.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img5;
 }
 
 .img6 {
   background-image: url(../assets/img6.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img6;
 }
 
 .img7 {
   background-image: url(../assets/img7.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img7;
 }
 
 .img8 {
   background-image: url(../assets/img8.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img8;
 }
 
 .img9 {
   background-image: url(../assets/img9.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img9;
 }
 
 .img10 {
   background-image: url(../assets/img10.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img10;
 }
 
 .img11 {
   background-image: url(../assets/img11.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img11;
 }
 
 .img12 {
   background-image: url(../assets/img12.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img12;
 }
 
 .img13 {
   background-image: url(../assets/img13.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img13;
 }
 
 .img14 {
   background-image: url(../assets/img14.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img14;
 }
 
 .img15 {
   background-image: url(../assets/img15.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img15;
 }
 
 .img16 {
   background-image: url(../assets/img16.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img16;
 }
 
 .img17 {
   background-image: url(../assets/img17.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img17;
 }
 
 .img18 {
   background-image: url(../assets/img18.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img18;
 }
 
 .img19 {
   background-image: url(../assets/img19.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img19;
 }
 
 .img20 {
   background-image: url(../assets/img20.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img20;
 }
 
 .img21 {
   background-image: url(../assets/img21.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img21;
 }
 
 .img22 {
   background-image: url(../assets/img22.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img22;
 }
 
 .img23 {
   background-image: url(../assets/imagen3.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img23;
 }
 
 .img24 {
   background-image: url(../assets/imagen3.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img24;
 }
 
 .img25 {
   background-image: url(../assets/imagen3.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img25;
 }
 
 .img26 {
   background-image: url(../assets/imagen3.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   grid-area: img26;
 }
 
@@ -386,6 +298,7 @@ footer p {
   grid-template-rows: repeat(3, 350px);
   grid-gap: 100px;
   font-size: 30px;
+  font-family: "Joan";
   color: white;
   text-align: justify;
 }
@@ -395,16 +308,17 @@ footer p {
 }
 
 .B {
-  grid-area: B;
-  background-image: url(../assets/boceto.png);
   background-size: cover;
   border: solid black 2px;
+  grid-area: B;
+  background-image: url(../assets/boceto.png);
 }
 
 .C {
+  background-size: cover;
+  border: solid black 2px;
   grid-area: C;
   background-image: url(../assets/boceto2.png);
-  border: solid black 2px;
 }
 
 .D {
@@ -416,9 +330,10 @@ footer p {
 }
 
 .F {
+  background-size: cover;
+  border: solid black 2px;
   grid-area: F;
   background-image: url(../assets/boceto3.jpg);
-  border: solid black 2px;
 }
 
 /*MEDIAS QUERIES*/

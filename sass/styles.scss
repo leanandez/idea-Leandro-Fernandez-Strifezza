@@ -5,7 +5,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Source+Sans+Pro:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Source+Sans+Pro:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+
+
+/*maps*/
+
+
+$estilos:(
+    fuente1: 'Source Sans Pro', 
+    fuente2: 'Joan', 
+    color1: #131c33,
+    color2: rgb(12, 11, 11),
+);
 
 body{
     background-color: #131c33;
@@ -25,6 +36,8 @@ body{
     
 }
 
+
+
 /*HEADER*/
 header{
     background-color: black; 
@@ -43,9 +56,9 @@ nav{
     grid-area: nav;
     display: flex;
     justify-content: center;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: map-get($estilos, fuente1);
     font-size: 20px; 
-    background-color: black;
+    background-color: map-get($estilos, color2 );
     border-bottom: 2px grey solid;
     
 }
@@ -57,8 +70,9 @@ nav{
     text-shadow: 4px 4px 2px #000000;
 
         &:hover{
-            color: white;
+            color: map-get($estilos, color1);
             font-weight: bold;
+            font-size: 20px;
 
         }
       
@@ -88,23 +102,6 @@ li{
 
 
 
-/* .cabecera{
-    height: calc(100vh - 50px);
-    grid-area: cabecera; 
-    animation-name: camaleon;
-    animation-iteration-count: initial;
-    animation-duration: 5s;
-    animation-iteration-count: 4;
-    
-       
-}
-
-.index{
-    background-image: url(../assets/img2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
-} */
 
 
 /*FIN HEADER*/
@@ -132,6 +129,7 @@ footer{
     background-color:black;
     color: white;
     border-top: white 2px solid;
+    font-family: map-get($estilos, fuente2);
 
         p{
             display: flex;
@@ -151,6 +149,7 @@ footer{
 .form{
     color: white;
     padding: 20px;
+    font-family: map-get($estilos , fuente1 );
     
 }
 .form-img{
@@ -219,209 +218,160 @@ footer{
     background-image: url(../assets/img1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; 
     grid-area: img1;
     
 }
 
 .img2{
+    @extend .img1;
     background-image: url(../assets/img2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img2;
 }
 
 .img3{
+    @extend .img1;
     background-image: url(../assets/img3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img3;
 }
 
 .img4{
+    @extend .img1;
     background-image: url(../assets/img4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img4;
 }
 
 
 .img5{
+    @extend .img1;
     background-image: url(../assets/img5.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img5;
 }
 
 .img6{
+    @extend .img1;
     background-image: url(../assets/img6.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img6;
 }
 
 .img7{
+    @extend .img1;
     background-image: url(../assets/img7.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img7;
 }
 
 .img8{
+    @extend .img1;
     background-image: url(../assets/img8.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img8;
 }
 
 .img9{
+    @extend .img1;
     background-image: url(../assets/img9.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img9;
 }
 
 .img10{
+    @extend .img1;
     background-image: url(../assets/img10.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img10;
 }
 
 .img11{
+    @extend .img1;
     background-image: url(../assets/img11.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img11;
 }
 
 .img12{
+    @extend .img1;
     background-image: url(../assets/img12.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img12;
 }
 
 .img13{
+    @extend .img1;
     background-image: url(../assets/img13.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img13;
 }
 
 .img14{
+    @extend .img1;
     background-image: url(../assets/img14.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img14;
 }
 
 .img15{
+    @extend .img1;
     background-image: url(../assets/img15.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img15;
 }
 
 .img16{
+    @extend .img1;
     background-image: url(../assets/img16.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img16;
 }
 
 .img17{
+    @extend .img1;
     background-image: url(../assets/img17.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img17;
 }
 
 .img18{
+    @extend .img1;
     background-image: url(../assets/img18.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img18;
 }
 
 .img19{
+    @extend .img1;
     background-image: url(../assets/img19.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img19;
 }
 
 .img20{
+    @extend .img1;
     background-image: url(../assets/img20.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img20;
 }
 
 .img21{
+    @extend .img1;
     background-image: url(../assets/img21.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img21;
 }
 
 .img22{
+    @extend .img1;
     background-image: url(../assets/img22.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    
     grid-area: img22;
 }
 
 .img23{
+    @extend .img1;
     background-image: url(../assets/imagen3.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img23;
 }
 
 .img24{
+    @extend .img1;
     background-image: url(../assets/imagen3.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img24;
 }
 
 .img25{
+    @extend .img1;
     background-image: url(../assets/imagen3.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img25;
 }
 
 .img26{
+    @extend .img1;
     background-image: url(../assets/imagen3.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     grid-area: img26;
 }
 
@@ -452,24 +402,32 @@ footer{
     grid-template-rows: repeat(3, 350px);
     grid-gap: 100px;
     font-size: 30px;
+    font-family: map-get($estilos , fuente2 );
     color: white;
     text-align: justify;
-    
 
 }
+
+
+@mixin dibujos {
+    background-size: cover;
+    border: solid black 2px;
+}
+
 .A{
     grid-area: A;
 }
 .B{
+    @include dibujos;
     grid-area: B;
     background-image: url(../assets/boceto.png);
-    background-size: cover;
-    border: solid black 2px;
+    
 }
 .C{
+    @include dibujos;
     grid-area: C;
     background-image: url(../assets/boceto2.png);
-    border: solid black 2px;
+   
 }
 .D{
     grid-area: D;
@@ -478,9 +436,10 @@ footer{
     grid-area: E;
 }
 .F{
+    @include dibujos;
     grid-area: F;
     background-image: url(../assets/boceto3.jpg);
-    border: solid black 2px;
+    
 }
 
 /*MEDIAS QUERIES*/
