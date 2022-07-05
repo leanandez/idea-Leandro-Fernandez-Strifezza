@@ -1,619 +1,437 @@
 * {
     margin: 0;
     padding: 0;
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Source+Sans+Pro:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Source+Sans+Pro:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
 
-
 /*maps*/
 
-
-$estilos:(
-    fuente1: 'Source Sans Pro', 
-    fuente2: 'Joan', 
+$estilos:(fuente1: 'Source Sans Pro',
+    fuente2: 'Joan',
     color1: #131c33,
     color2: rgb(12, 11, 11),
 );
 
-body{
-    background-color: #131c33;
-    width: 100vw;
-    overflow-x: hidden;
-       
+body {
+    background-color: map-get($estilos, color1);
+    width: 100%;
+    height: auto;
 }
 
-.container1{
-    display: grid;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: 100%;
+    /*HEADER*/
+
+    nav {
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        font-family: map-get($estilos, fuente1);
+        font-size: 20px;
+        background-color: map-get($estilos, color2);
+        border-bottom: 2px grey solid;
+
    
-    
-}
 
+    .navbar-dark .navbar-nav .nav-link {
+        list-style-type: none;
+        text-decoration: none;
+        color: aquamarine;
+        text-shadow: 4px 4px 2px #000000;
 
-
-/*HEADER*/
-header{
-    background-color: black; 
-    grid-area: header;
-    display: grid;
-    grid-template-areas: 
-    "nav"
-    "cabecera";
-    grid-template-rows: 60px calc(100vh - 60px); 
-    grid-template-columns: 100%;
-   
-    
-}
-
-.contact-about{
-    grid-template-areas: "nav";
-    grid-template-rows: 60px;
-}
-
-nav{
-    z-index: 1;
-    grid-area: nav;
-    display: flex;
-    justify-content: center;
-    font-family: map-get($estilos, fuente1);
-    font-size: 20px; 
-    background-color: map-get($estilos, color2 );
-    border-bottom: 2px grey solid;
-    
-}
-
-.navbar-dark .navbar-nav .nav-link{
-    list-style-type: none;
-    text-decoration: none;
-    color: aquamarine;
-    text-shadow: 4px 4px 2px #000000;
-
-        &:hover{
+        &:hover {
             color: map-get($estilos, color1);
             font-weight: bold;
             font-size: 20px;
 
         }
-      
-}
 
-
-
-li{
-    display: inline-block;
-    margin: 15px;
-    
-}
-
-.carousel-inner{
-    height: calc(100vh - 60px);
-
-        img{
-            height: auto;
-        }
-}
-
-
-
-.carousel-control-prev{
-    z-index: 0;
-}
-
-
-
-
-
-/*FIN HEADER*/
-
-/*MAIN*/
-
-main{
-    grid-area: main;
-    
-}
-
-
-
-/*FIN MAIN*/
-
-/*FOOTER*/
-footer{
-    grid-area: footer;
-    height: 100px;
-    background-color:black;
-    color: white;
-    border-top: white 2px solid;
-    font-family: map-get($estilos, fuente2);
-
-        p{
-            display: flex;
-            justify-content: center;
-            padding-top: 20px;
-        }
-   
-    
-}
-
-
-/*FIN FOOTER*/
-
-
-/*CONTACT*/
-
-.main-contact{
-    padding: 20px 0 20px 0;
-}
-
-.form{
-    color: white;
-    padding: 20px;
-    font-family: map-get($estilos , fuente1 );
-    
-}
-.form-img{
-    background-image: url(../assets/img8.jpg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-}
-
-
-/*ABOUT*/
-.main-about{
-    padding: 75px 0;
-    height: auto;
-    color: white;
-    font-size: 20px;
-    text-align: justify;
-
-    p{
-        padding-right: 25px;
     }
-    
-}
+ }
+
+    /* MAIN*/
+
+    .container-fluid {
+        padding: 0;
+    }
 
 
-
-.about-img{
-    background-image: url(/assets/nacho2.jpg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    ;
-}
-
-/*PORTFOLIO*/
+    /*INDEX*/
 
 
-.portfolio{
-    background-image: url(../assets/galleryfoto.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
-    border-bottom: 2px white solid;
-    animation-name: rotate;
-    animation-duration: 3s;
-   
+    .index-about {
+        width: 100%;
+        height: auto;
+        padding: 80px 0;
 
-}
+        .index-img {
+            background-image: url(/assets/nacho.jpg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
 
-.gallery {
-    display: grid;
-    grid-template-areas: 
-    "img1 img2 img2 img3"
-    "img4 img2 img2 img3"
-    "img5 img5 img6 img6"
-    "img5 img5 img7 img8"
-    "img9 img9 img10 img10"
-    "img11 img11 img10 img10"
-
-    "img12 img13 img13 img14"
-    "img15 img13 img13 img14"
-    "img16 img16 img17 img17"
-    "img16 img16 img18 img19"
-    "img20 img20 img21 img21"
-    "img22 img22 img21 img21"; 
-    
-    grid-template-columns: repeat(4,300px);
-    grid-template-rows: repeat(12, 250px); 
-    justify-self: center;
-    grid-gap: 2px;
-    margin-top: 20px;
-}
-
-.portimg{
-    border: solid 2px black;
-    transition: ease-out 0.5s;
-
-        &:hover{
-            transform: scale(1.3);
-            transition: ease-in 0.5s;
         }
-}
+
+        .index-p {
+            font-family: map-get($estilos, fuente2);
+            color: aquamarine;
+            text-align: justify;
+            font-size: 30px;
+
+        }
+
+        .btn {
+            font-family: map-get($estilos, fuente2);
+            font-weight: bold;
+            color: map-get($estilos, color2);
+            background-color: aquamarine;
+            width: 150px;
+
+            &:hover {
+                background-color: green;
+                color: aquamarine;
+                font-weight: bolder;
+            }
+        }
+    }
 
 
+    /*PORTFOLIO*/
 
-.img1 {
-    background-image: url(../assets/img1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
-    grid-area: img1;
+    .gallery {
+        display: grid;
+        grid-template-areas: 
+        "img1 img2 img2 img3"
+        "img4 img2 img2 img3"
+        "img5 img5 img6 img6"
+        "img5 img5 img7 img8"
+        "img9 img9 img10 img10"
+        "img11 img11 img10 img10"
     
-}
-
-.img2{
-    @extend .img1;
-    background-image: url(../assets/img2.jpg);
-    grid-area: img2;
-}
-
-.img3{
-    @extend .img1;
-    background-image: url(../assets/img3.jpg);
-    grid-area: img3;
-}
-
-.img4{
-    @extend .img1;
-    background-image: url(../assets/img4.jpg);
-    grid-area: img4;
-}
-
-
-.img5{
-    @extend .img1;
-    background-image: url(../assets/img5.jpg);
-    grid-area: img5;
-}
-
-.img6{
-    @extend .img1;
-    background-image: url(../assets/img6.png);
-    grid-area: img6;
-}
-
-.img7{
-    @extend .img1;
-    background-image: url(../assets/img7.jpg);
-    grid-area: img7;
-}
-
-.img8{
-    @extend .img1;
-    background-image: url(../assets/img8.jpg);
-    grid-area: img8;
-}
-
-.img9{
-    @extend .img1;
-    background-image: url(../assets/img9.jpg);
-    grid-area: img9;
-}
-
-.img10{
-    @extend .img1;
-    background-image: url(../assets/img10.jpg);
-    grid-area: img10;
-}
-
-.img11{
-    @extend .img1;
-    background-image: url(../assets/img11.jpg);
-    grid-area: img11;
-}
-
-.img12{
-    @extend .img1;
-    background-image: url(../assets/img12.jpg);
-    grid-area: img12;
-}
-
-.img13{
-    @extend .img1;
-    background-image: url(../assets/img13.png);
-    grid-area: img13;
-}
-
-.img14{
-    @extend .img1;
-    background-image: url(../assets/img14.jpg);
-    grid-area: img14;
-}
-
-.img15{
-    @extend .img1;
-    background-image: url(../assets/img15.jpg);
-    grid-area: img15;
-}
-
-.img16{
-    @extend .img1;
-    background-image: url(../assets/img16.jpg);
-    grid-area: img16;
-}
-
-.img17{
-    @extend .img1;
-    background-image: url(../assets/img17.png);
-    grid-area: img17;
-}
-
-.img18{
-    @extend .img1;
-    background-image: url(../assets/img18.png);
-    grid-area: img18;
-}
-
-.img19{
-    @extend .img1;
-    background-image: url(../assets/img19.png);
-    grid-area: img19;
-}
-
-.img20{
-    @extend .img1;
-    background-image: url(../assets/img20.jpg);
-    grid-area: img20;
-}
-
-.img21{
-    @extend .img1;
-    background-image: url(../assets/img21.jpg);
-    grid-area: img21;
-}
-
-.img22{
-    @extend .img1;
-    background-image: url(../assets/img22.png);
-    
-    grid-area: img22;
-}
-
-.img23{
-    @extend .img1;
-    background-image: url(../assets/imagen3.jpg);
-    grid-area: img23;
-}
-
-.img24{
-    @extend .img1;
-    background-image: url(../assets/imagen3.jpg);
-    grid-area: img24;
-}
-
-.img25{
-    @extend .img1;
-    background-image: url(../assets/imagen3.jpg);
-    grid-area: img25;
-}
-
-.img26{
-    @extend .img1;
-    background-image: url(../assets/imagen3.jpg);
-    grid-area: img26;
-}
-
-/*FIN PORTFOLIO*/
-
-/*CLASSES*/
-
-.classes{
-    background-image: url(../assets/monito.jpg);
-    background-size: cover;
-    background-position: center;
-    border-bottom: 2px white solid;
-    animation-name: rotate;
-    animation-duration: 3s;
-    
-}
-.main-classes{
-    background-image: url(../assets/fondoclasses.jpg);
-    background-size: cover;
-    padding: 50px;
-    justify-content: center;
-    font-size: 30px;
-    font-family: map-get($estilos , fuente2 );
-    color: white;
-    text-align: justify;
+        "img12 img13 img13 img14"
+        "img15 img13 img13 img14"
+        "img16 img16 img17 img17"
+        "img16 img16 img18 img19"
+        "img20 img20 img21 img21"
+        "img22 img22 img21 img21"; 
         
+        grid-template-columns: repeat(4,300px);
+        grid-template-rows: repeat(12, 250px); 
+        grid-gap: 2px;
+        margin: 30px;
+
+
+        .portimg {
+            border: solid 2px black;
+            transition: ease-out 0.5s;
+
+            &:hover {
+                transform: scale(1.05);
+                transition: ease-in 0.5s;
+            }
+        }
+
+
+        @mixin img-portfolio{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .img1 {
+            @include img-portfolio;
+            background-image: url(../assets/img1.jpg);
+            grid-area: img1;
+
+        }
+
+        .img2 {
+            @include img-portfolio;
+            background-image: url(../assets/img2.jpg);
+            grid-area: img2;
+        }
+
+        .img3 {
+            @include img-portfolio;
+            background-image: url(../assets/img3.jpg);
+            grid-area: img3;
+        }
+
+        .img4 {
+            @include img-portfolio;
+            background-image: url(../assets/img4.jpg);
+            grid-area: img4;
+        }
+
+
+        .img5 {
+            @include img-portfolio;
+            background-image: url(../assets/img5.jpg);
+            grid-area: img5;
+        }
+
+        .img6 {
+            @include img-portfolio;
+            background-image: url(../assets/img6.png);
+            grid-area: img6;
+        }
+
+        .img7 {
+            @include img-portfolio;
+            background-image: url(../assets/img7.jpg);
+            grid-area: img7;
+        }
+
+        .img8 {
+            @include img-portfolio;
+            background-image: url(../assets/img8.jpg);
+            grid-area: img8;
+        }
+
+        .img9 {
+            @include img-portfolio;
+            background-image: url(../assets/img9.jpg);
+            grid-area: img9;
+        }
+
+        .img10 {
+            @include img-portfolio;
+            background-image: url(../assets/img10.jpg);
+            grid-area: img10;
+        }
+
+        .img11 {
+            @include img-portfolio;
+            background-image: url(../assets/img11.jpg);
+            grid-area: img11;
+        }
+
+        .img12 {
+            @include img-portfolio;
+            background-image: url(../assets/img12.jpg);
+            grid-area: img12;
+        }
+
+        .img13 {
+            @include img-portfolio;
+            background-image: url(../assets/img13.png);
+            grid-area: img13;
+        }
+
+        .img14 {
+            @include img-portfolio;
+            background-image: url(../assets/img14.jpg);
+            grid-area: img14;
+        }
+
+        .img15 {
+            @include img-portfolio;
+            background-image: url(../assets/img15.jpg);
+            grid-area: img15;
+        }
+
+        .img16 {
+            @include img-portfolio;
+            background-image: url(../assets/img16.jpg);
+            grid-area: img16;
+        }
+
+        .img17 {
+            @include img-portfolio;
+            background-image: url(../assets/img17.png);
+            grid-area: img17;
+        }
+
+        .img18 {
+            @include img-portfolio;
+            background-image: url(../assets/img18.png);
+            grid-area: img18;
+        }
+
+        .img19 {
+            @include img-portfolio;
+            background-image: url(../assets/img19.png);
+            grid-area: img19;
+        }
+
+        .img20 {
+            @include img-portfolio;
+            background-image: url(../assets/img20.jpg);
+            grid-area: img20;
+        }
+
+        .img21 {
+            @include img-portfolio;
+            background-image: url(../assets/img21.jpg);
+            grid-area: img21;
+        }
+
+        .img22 {
+            @include img-portfolio;
+            background-image: url(../assets/img22.png);
+            grid-area: img22;
+        }
+
+
+    }
+
+
+    /*CLASSES*/
+
+    .main-classes {
+        height: auto;
+        padding: 50px;
+        justify-content: center;
+        font-size: 30px;
+        font-family: map-get($estilos, fuente2);
+        color: aquamarine;
+        text-align: justify;
+
         .row {
             margin: 25px 0;
         }
 
-}
+
+        .class-img {
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: solid black 2px;
+            height: auto;
+        }
 
 
-@mixin dibujos {
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: solid black 2px;
-    height: auto;
-}
+        .class1 {
+            background-image: url(../assets/boceto.png);
+        }
 
+        .class2 {
+            background-image: url(../assets/boceto2.png);
+        }
 
-.class-img{
-    @include dibujos;
-
-}
-.class1{
-        background-image: url(../assets/boceto.png);
-    }
-.class2{
-        background-image: url(../assets/boceto2.png);
-    }
-.class3{
-        background-image: url(../assets/boceto3.jpg);
-    }
-    
-    
-
-
-
-/*MEDIAS QUERIES*/
-
-@media only screen and (max-width: 767px){
-   
-    .navbar{
-        padding-left: 0;
-    }
-
-    .navbar-nav{
-        background-color: black;
-           
-    }
-    
-    li{
-       border-bottom: 2px solid grey;
+        .class3 {
+            background-image: url(../assets/boceto3.jpg);
+        }
     }
 
 
+    /*ABOUT*/
 
-   .header-portfolio{
-       height: 650px;
-       
-   }
-
-    .portfolio{
-        background-size: cover;
-        background-position: top;
-        background-position-x: -15px;
-        
-    }
-
-    .gallery {
-       
-        grid-template-areas: 
-        "img2 img2"
-        "img1 img4"
-        "img3 img3"
-        "img3 img3"
-        "img5 img5"
-        "img5 img5"
-        "img6 img6"
-        "img7 img8"
-        "img9 img9"
-        "img10 img10"
-        "img10 img10"
-        "img11 img11"
-
-        "img13 img13"
-        "img12 img15"
-        "img14 img14"
-        "img14 img14"
-        "img16 img16"
-        "img16 img16"
-        "img17 img17"
-        "img18 img19"
-        "img20 img20"
-        "img21 img21"
-        "img21 img21"
-        "img22 img22"
-        
-        ;
-        grid-template-columns: 250px 250px;
-        grid-template-rows: repeat(24, 250px);
-    }
-
-    .classes{
-        background-position-x: -25px;
-    }
-
-    .main-classes{
+    .main-about {
+        padding: 75px 0;
+        width: 100%;
+        height: auto;
+        color: aquamarine;
         font-size: 20px;
-        
-    }
+        text-align: justify;
 
-
-}
-
-
-@media (max-width: 576px){
-   
-   
-
-    .carousel-inner{
-        height: 4px;
-    }
-   
-    .form-img{
-        height: 300px;
-    }
-
-    .main-about{
-        height: auto;
-
-        h1{
-            padding: 25px 0 0 25px;
+        .row {
+            margin-right: 0px;
         }
-        p{
-            padding: 25px;
+
+        .about-p {
+            width: 100%;
+
+        }
+
+        .about-img {
+            background-image: url(../assets/nacho2.jpg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
         }
     }
-    
-    .about-img{
-        height: 300px;
+
+    /*CONTACT*/
+
+    .main-contact {
+        padding: 20px 0 20px 0;
+
+        .row {
+            margin-right: 0px;
+        }
+
+        .form {
+            color: white;
+            padding: 20px;
+            font-family: map-get($estilos, fuente1);
+
+            .btn{
+                margin-left: 20px;
+            }
+        }
+
+        .form-img {
+            background-image: url(../assets/img8.jpg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
     }
 
+    /*FOOTER*/
 
-
-    .row-classes{
-        display: flex;
-        flex-flow: column-reverse;
-    }
-
-    
-    .class-img{
-        height: 250px;
-    }
-
-    
- }
-
-
-@media only screen and (max-width: 480px){
-
-    .header-index{
+    footer {
         height: auto;
-        grid-template-rows: 50px auto;
+        background-color: black;
+        color: white;
+        border-top: white 2px solid;
+        font-family: map-get($estilos, fuente2);
+
+        p {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin-bottom: 0;
+        }
+
     }
 
-    nav{
-        font-size: 12px;
-              
+
+
+/*MEDIA QUERIES*/
+
+
+
+@media only screen and (max-width: 480px) {
+
+    /*INDEX*/
+
+    .carousel-inner .carousel-item img {
+        object-fit: cover;
+        object-position: center;
+        height: 400px;
     }
 
-    li{
-        margin: 5px;
-    }
-
-  
-    .carousel-inner{
-        z-index: 0;
-        height: 320px;
-    }
- 
-
-    .header-portfolio{
-        height: auto;
-        grid-template-rows: 60px 230px;
-        grid-template-columns: 100%;
+    .index-about {
+        margin-left: 0px;
+        .index-img {
             
-        
+            height: 250px;
+        }
+
+        .index-p {
+            padding: 40px 40px 0 40px;
+
+            h1 {
+                text-align: center;
+            }
+
+            p {
+                font-size: 24px;
+            }
+
+            .btn {
+                margin-left: 33%;
+            }
+        }
     }
-    .portfolio{
-        background-position-y: -45px;
-    }
- 
+  
+    /*PORTFOLIO*/
+
+
     .gallery{
         grid-template-areas: 
         "img2"
@@ -639,100 +457,98 @@ footer{
         "img21"
         "img22"
            ;
-        grid-template-columns: 400px;
+        grid-template-columns: 1fr;
         grid-template-rows: repeat(22, 250px);
+
+     .img1, .img3, .img4, .img7, .img8{
+         background-position-y: -70px;
+     }
     }
 
-    .header-classes{
-        height: auto;
-        grid-template-rows: 60px 230px;
-        grid-template-columns: 100%;
-       
-    }
-
-    .classes{
-        background-position-x: 0px;
-    }
-
-
-}
-
-@media only screen and (max-width: 320px){
     
-    .header-index{
-        height: auto;
-        grid-template-rows: 50px auto;
-    }
 
-    .carousel-inner{
-        height: 220px;
-    }
-        
-
-    li{
-        margin: 4px;
-    }
-
-    .header-portfolio{
-        height: auto;
-        grid-template-rows: 50px 200px;
-    }
-    .portfolio{
-        background-position-y: 0px;
-        background-position-x: 0px;
-        
-    }
-    
-    .gallery{
-        grid-template-columns: 250px;
-
-    }
-
-    .header-classes{
-       height: auto;
-       grid-template-rows: 60px 230px;
-    }
+    /*CLASSES*/
     .main-classes{
-        padding-left: 20px;
-        font-size: 14px;
-
-            h1{
-                font-size: 20px;
+        padding: 20px;
+        .row-1{
+            display: flex;
+            flex-direction: column-reverse;
+            
+            .class1{
+                padding-top: 250px;
             }
+        }
+        .row-3{
+            display: flex;
+            flex-direction: column-reverse;
+            
+            .class3{
+                padding-top: 250px;
+            }
+        }
+
+        .class-img{
+            height: 250px;
+        }
+        h1{
+            text-align: center;
+            font-weight: bolder;
+            font-size: 25px;
+        }
+        h2{
+            text-align: center;
+        }
+
+        p{
+            font-size: 25px;
+        }
     }
 
-   
+    /*ABOUT*/
+    .about-img{
+        height: 250px;
+    }
+    .about-p{
+        padding: 50px;
+        font-size: 22px;
+        h1{
+            text-align: center;
+        }
+    }
+
+    /*CONTACT*/
+    .form-img{
+        height: 250px;
+    }
+
+    /*FOOTER*/
 
     footer{
-        font-size: 10px;
+        text-align: center;
     }
+
+
+
 }
 
 
-/*animaciones*/
+@media only screen and (max-width: 320px){
 
-@keyframes camaleon{
-   0%{filter: hue-rotate(0deg);}
-   30%{filter: hue-rotate(0deg);}
-   100%{filter: hue-rotate(360deg);}
-   
- 
-}
-
-
-@keyframes rotate{
-    0%{
-        transform: rotateX(90deg);
-        filter: opacity(50%);
-    }
+    /*INDEX*/
+    .index-about{
+        .index-p{
         
-    100%{
-        transform: rotateX(0deg);
-        filter: opacity(100%);
+            .btn{
+            margin-left: 50px;
+        }
     }
-}
 
-@keyframes scale-hover{
-    transform: scale(1.3);
+}
+    /*PORTFOLIO*/
+    .gallery{
+        .img1, .img3, .img4, .img7, .img8{
+            background-position: center
+        }
+    }
 
 }
